@@ -8,7 +8,8 @@
 import random
 import pandas as pd
 from datetime import date, timedelta
-from typing import Tuple
+from typing import Optional, Tuple
+
 
 # Daty
 TODAY = date.today()
@@ -182,7 +183,8 @@ def make_endur_dump(hd_df: pd.DataFrame, pid_to_cat: dict) -> pd.DataFrame:
 
 # w db_setup.py
 
-def setup_database(seed: int | None = None, shuffle: bool = True):
+def setup_database(seed: Optional[int] = None, shuffle: bool = True) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+
     if seed is not None:
         random.seed(seed)
 
