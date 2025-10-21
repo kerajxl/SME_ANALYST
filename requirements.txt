@@ -1,0 +1,5 @@
+pandas
+numpy
+Faker
+sqllite3
+pandasql
